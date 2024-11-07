@@ -1,0 +1,39 @@
+package com.simplilearn.demo;
+
+@FunctionalInterface
+interface Register{
+	void register();
+}
+
+@FunctionalInterface
+interface Login{
+	void login(String email,String password);
+}
+class Authentication{
+	static void registerUser() {
+		System.out.println("Registering the User.....");
+	}
+	void loginUser(String username,String password) {
+		if(username.equals("nikunj@cisco.com")&& password.equals("Nikunj@123")) {
+			System.out.println("Login Successful...!");
+		}else {
+			System.out.println("Login Failed...!");
+		}
+		
+	}
+}
+
+public class LambdaMethodRef {
+	
+	public static void main(String[] args) {
+		
+		Register ref= Authentication::registerUser;
+		ref.register();
+		
+		//Login loginRef=Authentication::loginUser;
+		Authentication auth=new Authentication();
+		Login loginref=auth::loginUser;
+		loginref.login("nikunj1@cisco.com", "Nikunj@123");
+	}
+
+}
