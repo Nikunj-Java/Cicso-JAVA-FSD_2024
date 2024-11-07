@@ -1,0 +1,15 @@
+package com.simplilearn.demo;
+
+import java.util.ArrayList;
+
+public class App {
+	
+	public static void main(String[] args) {
+		Estore estore= new Estore();
+		ArrayList<Products> products=estore.getProductsFromStore();
+		
+		System.out.println("Estore Products:");
+		products.forEach((product)-> System.out.println(product));
+	}
+
+}
