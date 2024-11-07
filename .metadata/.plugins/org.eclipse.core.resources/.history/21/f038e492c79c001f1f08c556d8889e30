@@ -9,7 +9,7 @@ public class DeleteFileJava11 {
 	
 	public static void main(String[] args) {
 		Path filePath=Paths.get("newfile1.txt");
-	 
+		
 		try {
 			
 			Files.delete(filePath);

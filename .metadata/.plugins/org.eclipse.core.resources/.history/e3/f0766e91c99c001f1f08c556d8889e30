@@ -1,0 +1,13 @@
+package com.simplilearn.demo;
+
+public class LambdaJava11 {
+	
+	public static void main(String[] args) {
+		
+		//String text="Hello";
+		var text="Hello";
+		
+		System.out.println(text);
+	}
+
+}

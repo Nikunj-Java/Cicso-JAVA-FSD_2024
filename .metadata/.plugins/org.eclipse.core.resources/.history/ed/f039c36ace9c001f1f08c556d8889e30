@@ -1,0 +1,33 @@
+package com.simplilearn.demo;
+@FunctionalInterface
+interface Register{
+	void register();
+}
+
+class User implements Register{
+
+	@Override
+	public void register() {
+		// TODO Auto-generated method stub
+		System.out.println("User Registered");
+		
+	}
+	
+}
+
+public class LabmdaExpressionJava11 {
+	
+	public static void main(String[] args) {
+		Register ref=new Register() {
+			
+			@Override
+			public void register() {
+				// TODO Auto-generated method stub
+				System.out.println("User Registered");
+			}
+		};
+		
+		ref.register();
+	}
+
+}
