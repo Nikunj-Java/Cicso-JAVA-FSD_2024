@@ -1,5 +1,5 @@
 package com.simplilearn.demo;
-@FunctionalInterface
+
 interface Register{
 	void register();
 }
@@ -8,11 +8,6 @@ interface Register{
 interface Login {
 	void login(String email,String password);
 }
-@FunctionalInterface
-interface PromoCodeDiscount{
-	double getDiscountWithPromoCode(double amount,String promoCode);
-}
-
 
 //task to create Login Interface Here
 //one method to login using email and password
@@ -49,7 +44,7 @@ public class LabmdaExpressionJava11 {
 		
 		//use Login and check
 		
-		Login loginref=(email,password)->{ //datatypes are not mendatory
+		Login loginref=(String email,String password)->{
 			System.out.println("Connecting...");
 			System.out.println("Validating User...");
 			
@@ -61,26 +56,6 @@ public class LabmdaExpressionJava11 {
 		};
 		
 		loginref.login("nikunj@cisco.com", "Nikunj@123");
-		
-		/*PromoCodeDiscount promoCodeRef=(amount,promoCode)->{
-			if(promoCode.equals("JUMBO")) {
-				amount -=0.40*amount;
-			}else {
-				amount -=0.10*amount;
-			}
-			return amount;
-		};*/
-		
-		//optimise the code
-		PromoCodeDiscount promoCodeRef=(amount,promoCode)->{
-			 double finalAmount=promoCode.equals("JUMBO")?(amount-0.40*amount):(amount-0.10*amount);
-			 return finalAmount;
-		};
-			
-		double amountToPay=promoCodeRef.getDiscountWithPromoCode(2000, "JUMBO");
-		System.out.println("Net Amount to Pay: "+amountToPay);
-		 
 	}
-	
 
 }
