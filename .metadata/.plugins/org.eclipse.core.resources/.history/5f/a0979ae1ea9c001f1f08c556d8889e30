@@ -1,0 +1,33 @@
+package com.simplilearn.demo;
+
+class UserDetails{
+	String name;
+	String phone;
+	String email;
+	UserDetails(){
+		
+	}
+	public UserDetails(String name, String phone, String email) {
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+	}
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", phone=" + phone + ", email=" + email + "]";
+	}
+}
+
+public class OptionalClass {
+	
+	public static void main(String[] args) {
+		UserDetails u1= new UserDetails();
+		UserDetails u2= new UserDetails("Nikunj Soni", "9988776655", "nikunj@cisco.com");
+		//User u3=null;
+		
+		//System.out.println("Name in u1 is: "+u1.name);
+		System.out.println("Name in u2 is: "+u2.name);
+		//System.out.println("Name in u1 is: "+u3.name);
+	}
+
+}
