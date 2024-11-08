@@ -3,7 +3,7 @@ package com.simplilearn.config;
 import java.sql.Connection;
 import java.sql.Statement;
 
-public class CRUDoperation {
+public class InsertReocrd {
 
 	public static void main(String[] args) {
 		Connection conn = DBConfigJDBC.getConnection();
@@ -14,7 +14,7 @@ public class CRUDoperation {
 			try {
 				// 01 .Insert a Record
 				Statement stmt=conn.createStatement();
-				String query = "insert into eproduct(name,price)value('xyz-Laptop',20000)";
+				String query = "insert into eproduct(name,price)value('Nikunj-Laptop',120000)";
 				// types of Statements:
 				// 1--> Prepared Statements--> Dynamic Data
 				// 2--> Callable Statements--> Stored procedure
