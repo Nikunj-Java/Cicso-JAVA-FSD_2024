@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Class-Path: mysql-connector-j-8.0.33.jar protobuf-java-3.21.9.jar spring
+ -context-6.1.10.jar spring-aop-6.1.10.jar spring-beans-6.1.10.jar sprin
+ g-core-6.1.10.jar spring-jcl-6.1.10.jar spring-expression-6.1.10.jar mi
+ crometer-observation-1.12.7.jar micrometer-commons-1.12.7.jar hibernate
+ -jpa-2.1-api-1.0.2.jar
+Main-Class: com.simplilearn.demo.App
+Created-By: Maven Integration for Eclipse
+

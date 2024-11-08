@@ -1,0 +1,39 @@
+
+Create Database
+--------------------
+>create database cisco;
+
+Change the Database
+-----------------
+>use cisco;
+
+Create Table:
+------------
+
+>create table eproduct (id bigint primary key auto_increment,name varchar(100),price decimal(10,2),date_added timestamp default now());
+
+See the structure of tabel
+-------------------------
+>describe eproduct;
+
+
+Insert the record:
+-------------------------
+>insert into eproduct(name,price) value('HP-laptop',56000);
+
+Fetch the record
+-------------------
+
+>select * from eproduct;
+
+Update the record
+-------------------
+>update eproduct set name='Hp-Lapton123' where id=1;
+
+Delete the record
+---------------------
+>delete from eproduct where id=4;
+
+Delete Entire Table
+----------------------
+> drop table eproduct;
