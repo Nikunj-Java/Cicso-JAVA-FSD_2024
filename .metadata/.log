@@ -1295,3 +1295,15 @@ org.apache.hc.client5.http.HttpHostConnectException: Connect to https://download
 	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-08 14:16:55.292
+!MESSAGE Classpath changed for project: JDBC
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-08 14:20:46.468
+!MESSAGE Classpath changed for project: JDBC
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-08 14:23:44.299
+!MESSAGE Classpath changed for project: JDBC
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-08 14:24:16.785
+!MESSAGE Classpath changed for project: JDBC
