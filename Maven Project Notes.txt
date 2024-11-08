@@ -1,0 +1,28 @@
+add below command in pom.xml file below <dependencies> tag
+
+<build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.simplilearn.demo.App</mainClass><!--This is Your Main Class of Your App--!>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+
+-mvn clean
+-mvn install
+
+-> right click to the jar file and open in terminal
+-> java -jar name_of_your_File-0.0.1.SHANPSHOT.jar
+
+
+output: --------------------
