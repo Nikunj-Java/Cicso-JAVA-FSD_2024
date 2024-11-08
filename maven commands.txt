@@ -1,0 +1,30 @@
+***********************************************************************************************************
+Maven Commands
+***********************************************************************************************************
+1 . mvn clean
+--------------
+- it will remove the `target` directory which contains all the compiled code , packaged artifacts and other build outputs.
+- inshort it is used to clean up the project before a fresh build
+
+2. mvn compile
+--------------
+
+- compile the source codeof the project(  located in src/main/java)
+
+3. mvn test
+-------------
+- compile and runs the unit tests located in src/test/java (typically follws Junit Framework)
+
+4. mvn package
+--------------
+- packages are compiled into desired format, such as .jar,.zip.war or .ear file into target Directory
+
+5. mvn install
+--------------
+- install packaged artifacts(.jar  or .war) into local maven respository(~/.m2/repository)
+
+6. mvn Deploy
+--------------
+
+- deploy the packaged artifact to a remote Maven Repository
+
