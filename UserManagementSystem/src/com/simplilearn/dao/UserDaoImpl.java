@@ -2,6 +2,8 @@ package com.simplilearn.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.simplilearn.dao.UserDAO;
@@ -50,7 +52,32 @@ public class UserDaoImpl implements UserDAO {
 	@Override
 	public List<User> getAllUsers() {
 		// TODO Auto-generated method stub
-		return null;
+		Connection conn=DBConfig.getConnection();
+		String query="Select * from user";
+		try {
+			PreparedStatement pst=conn.prepareStatement(query);
+			ResultSet rst=pst.executeQuery();
+			List<User> list=new ArrayList<>();
+			
+			while(rst.next()) {
+				User u= new User(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4));
+				list.add(u);
+			}
+			return list;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				conn.close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+				e2.printStackTrace();
+			}
+		}
+		
 	}
 
 	@Override
@@ -68,7 +95,34 @@ public class UserDaoImpl implements UserDAO {
 	@Override
 	public User getUserbyId(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		User user=null;
+		ResultSet result=null;
+		Connection conn=DBConfig.getConnection();
+		if(conn!=null) {
+			try {
+				String query="select * from user where id=?";
+				PreparedStatement pst=conn.prepareStatement(query);
+				pst.setInt(1, id);
+				result=pst.executeQuery();
+				result.next();
+				
+				user=new User(result.getInt("id"), result.getString("name"), result.getString("email"), result.getString("username"));
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+				System.out.println("Error: "+e);
+			} finally {
+				try {
+					conn.close();
+				} catch (Exception e2) {
+					// TODO: handle exception
+					e2.printStackTrace();
+				}
+			}
+		}else {
+			System.out.println("Error While Connecting to DATABASE");
+		}
+		return user;
 	}
 
 }

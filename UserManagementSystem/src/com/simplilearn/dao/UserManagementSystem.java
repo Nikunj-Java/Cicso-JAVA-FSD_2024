@@ -1,5 +1,6 @@
 package com.simplilearn.dao;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class UserManagementSystem {
@@ -31,6 +32,25 @@ public class UserManagementSystem {
 				System.out.println("User Not Inserted");
 				
 			}
+			break;
+			
+		case 4:
+			//Retrive a Record
+			System.out.println("***************RETRIVE-RECORD*****************");
+			List<User> list=dao.getAllUsers();
+			System.out.println(list);
+			break;
+			
+		case 5:
+			//Retrive a Record
+			System.out.println("***************RETRIVE-RECORD*****************");
+			System.out.println("Enter Id to search for User");
+			int Search_id=sc.nextInt();
+			
+			//call userDao Method
+			
+			User u=dao.getUserbyId(Search_id);
+			System.out.println(u.toString());
 			break;
 			
 		 
