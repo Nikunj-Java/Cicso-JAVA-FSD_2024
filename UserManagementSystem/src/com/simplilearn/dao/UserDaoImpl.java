@@ -83,14 +83,65 @@ public class UserDaoImpl implements UserDAO {
 	@Override
 	public User updateUser(User user, int id) {
 		// TODO Auto-generated method stub
-		return null;
+		int result=0;
+		Connection conn=DBConfig.getConnection();
+		
+		if(conn!=null) {
+			try {
+				
+				String query="update user set name=?,email=?,username=? where id=?";
+				PreparedStatement statement=conn.prepareStatement(query);
+				statement.setString(1, user.getName());
+				statement.setString(2, user.getEmail());
+				statement.setString(3, user.getUsername());
+				statement.setInt(4, id);
+				result=statement.executeUpdate();
+				
+				 
+				
+				 
+			} catch (Exception e) {
+				// TODO: handle exception
+				System.out.println("Error: "+e);
+			}finally {
+				try {
+					conn.close();
+				} catch (Exception e2) {
+					// TODO: handle exception
+					e2.printStackTrace();
+				}
+			}
+			
+		}else {
+			System.out.println("Error While Connecting DATABASE");
+		}
+		
+		return user;
 	}
 
 	//complete within 10 min
 	@Override
 	public boolean deleteUser(int id) {
 		// TODO Auto-generated method stub
-		return false;
+		boolean res=false;
+		Connection conn=DBConfig.getConnection();
+		String query="delete from user where id=?";
+		
+		try {
+			PreparedStatement pst=conn.prepareStatement(query);
+			pst.setInt(1, id);
+			
+			int x=pst.executeUpdate();
+			if(x>0) {
+				res=true;
+			}else {
+				res=false;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return res;
 	}
 
 	@Override

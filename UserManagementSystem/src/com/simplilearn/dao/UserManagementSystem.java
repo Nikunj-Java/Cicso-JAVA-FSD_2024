@@ -33,7 +33,47 @@ public class UserManagementSystem {
 				
 			}
 			break;
+		case 2:
+			//UPDATE a Record
+			System.out.println("***************UPDATE-RECORD*****************");
+			sc.nextLine();
+			System.out.println("Enter Your Name");
+			String u_name=sc.nextLine();
 			
+			System.out.println("Enter Your Email");
+			String u_email=sc.nextLine();
+			
+			System.out.println("Enter Your username");
+			String u_username=sc.nextLine();
+			
+			System.out.println("Enter Your ID");
+			int u_id=sc.nextInt();
+			sc.nextLine();
+			//update all other fields
+			
+			User user=dao.updateUser(new User(u_name, u_email, u_username),u_id);
+			
+			if(user!=null) {
+				System.out.println(user.toString());
+				System.out.println("Record Updated Successfully");
+			}else {
+				System.out.println("Error While Inserting a Record");
+			}
+			
+			break;
+			
+		case 3:
+			//DELETE Record
+			System.out.println("***************DELETE-RECORD*****************");
+			System.out.println("Enter User Id to Delete User");
+			int id=sc.nextInt();
+			
+			if(dao.deleteUser(id)) {
+				System.out.println("User Deleted");
+			}else {
+				System.out.println("No User Available to Delete With id: "+id);
+			}
+			break;
 		case 4:
 			//Retrive a Record
 			System.out.println("***************RETRIVE-RECORD*****************");
