@@ -79,13 +79,14 @@ public class UserDaoImpl implements UserDAO {
 		}
 		
 	}
-
+     //complete within 10 min
 	@Override
 	public User updateUser(User user, int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	//complete within 10 min
 	@Override
 	public boolean deleteUser(int id) {
 		// TODO Auto-generated method stub
