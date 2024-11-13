@@ -1278,3 +1278,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact javax.servlet
 2024-11-08 12:31:43,335 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\2024\JavaFSD2024\MavenWebApp\src\test\resources
 2024-11-08 12:31:43,335 [Worker-69: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of MavenWebApp
 2024-11-08 12:31:43,335 [Worker-69: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for MavenWebApp
+2024-11-13 09:20:36,845 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
