@@ -1,0 +1,12 @@
+OPEN ALREADY PREPARED DATABASE
+------------------------------
+
+> use cisco_user_2024;
+
+CREATE STORED PROCEDURE
+------------------------------
+> CREATE PROCEDURE add_user(IN uname varchar(100),In uemail varchar(100),IN uusername varchar(100)) INSERT INTO user (name,email,username) VALUES(uname,uemail,uusername);
+
+TO CHECK IT IS WORKING
+------------------------------
+> CALL add_user('DEMO','demo@testmail.com','demo_user');
