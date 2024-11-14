@@ -14,4 +14,15 @@
   	<servlet-name>first</servlet-name>
   	<url-pattern>/first</url-pattern>
   </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>second</servlet-name>
+  	<servlet-class>com.simplilearn.servlet.SecondServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>second</servlet-name>
+  	<url-pattern>/second</url-pattern>
+  </servlet-mapping>
 </web-app>
