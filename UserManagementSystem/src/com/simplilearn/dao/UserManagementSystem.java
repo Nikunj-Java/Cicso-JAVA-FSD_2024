@@ -48,7 +48,7 @@ public class UserManagementSystem {
 			
 			System.out.println("Enter Your ID");
 			int u_id=sc.nextInt();
-			sc.nextLine();
+			//sc.nextLine();
 			//update all other fields
 			
 			User user=dao.updateUser(new User(u_name, u_email, u_username),u_id);
