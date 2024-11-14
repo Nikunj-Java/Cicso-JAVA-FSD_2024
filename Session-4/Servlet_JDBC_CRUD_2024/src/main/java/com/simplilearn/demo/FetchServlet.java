@@ -43,6 +43,7 @@ public class FetchServlet extends HttpServlet {
 					 out.print("<tr>");
 					 out.print("<td>"+rs.getInt(1)+"</td>"+"<td>"+rs.getString(2)+"</td>"+"<td>"+rs.getString(3)+"</td>"+"<td>"+rs.getString(4)+"</td>");
 					 out.print("</tr>");
+					 
 				 }
 				 
 				 out.print("</tbody></table>");
