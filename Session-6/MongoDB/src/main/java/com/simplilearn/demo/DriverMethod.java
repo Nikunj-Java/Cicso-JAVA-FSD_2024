@@ -14,6 +14,8 @@ public class DriverMethod {
 		
 		int key= sc.nextInt();
 		
+		//create Dynamic Insertion with user input
+		
 		switch (key) {
 		case 1:
 			//create
@@ -26,6 +28,10 @@ public class DriverMethod {
 		case 3:
 			//read
 			crud.update("Nikunj Soni", "Vishal");;
+			break;
+		case 4:
+			//read
+			crud.delete("Vishal");;
 			break;
 		}
 		

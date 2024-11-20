@@ -47,5 +47,15 @@ public class MongoCRUD {
 			System.out.println("Document not Found to Update");
 		}
 	}
+	
+	public void delete(String name) {
+		Document deletedocument=collection.findOneAndDelete(eq("name",name));
+		
+		if(deletedocument!=null) {
+			System.out.println("Document Deleted: "+deletedocument.toJson());
+		}
+		
+		
+	}
 
 }
