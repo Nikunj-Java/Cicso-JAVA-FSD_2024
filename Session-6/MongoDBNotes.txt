@@ -1,0 +1,115 @@
+***********************************************************
+CREATING DATABASE
+***********************************************************
+
+> use <name_of_database>
+
+------------------------------------------------------------
+
+
+*************************************************************
+CREATING COLLECTIONS
+*************************************************************
+
+>db.createCollection("Your_name_of_collection");
+
+Result:{ok:1}
+
+
+*************************************************************
+DROPPING COLLECTION
+*************************************************************
+
+>db.Your_name_of_collection.drop();
+
+Result: True
+
+
+*************************************************************
+DROP DATABASE
+*************************************************************
+
+>db.dropDatabase("Your_Database_Name");
+
+Result:  {ok,dropped:'Your_Database_Name');
+
+
+**************************************************************
+CREATING RECORD IN DATABASE
+**************************************************************
+
+>db.collection_name.insertOne({name:"Nikunj Soni",email:"Nikunj@gmail.com"});
+
+Result:{
+	acknowledge:true,
+	insertedId:cghjcahgfcgahfc
+}
+
+
+*************************************************************
+INSERT MANY RECORDS IN DATABASE
+*************************************************************
+>db.collection_name.insertMany([{name:"Nikunj Soni",email:"Nikunj@gmail.com"},{name:"Alex",email:"Alex@gmail.com"},{name:"jhon",email:"jhon@gmail.com"},{name:"Siri",email:"siri@gmail.com"}]);
+
+Result:
+
+acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("673d689bc140fa0123559c25"),
+    '1': ObjectId("673d689bc140fa0123559c26"),
+    '2': ObjectId("673d689bc140fa0123559c27"),
+    '3': ObjectId("673d689bc140fa0123559c28")
+  }
+
+
+*************************************************************
+RETRIVE RECORD IN DATABASE
+*************************************************************
+
+>db.collection_name.find();
+
+Result: {
+	
+	id:
+	name:
+	email:
+	
+}
+
+**************************************************************
+RETRIVE RECORD BY VALUE IN A DATABASE
+**************************************************************
+>db.collection_name.find({JSON});
+
+eg: db.employee.find({name:"Nikunj Soni"});
+
+
+Result: {
+
+}
+
+***************************************************************
+UPDATE RECORD BY VALUE IN A DATABASE
+***************************************************************
+>db.collection_name.updateOne({find_by_value in JSON Formate},$set{value to be update in JSON Format});
+
+eg: db.employee.updateOne({name:"Nikunj Soni"},{$set:{email:"abcd@testmail.com"}});
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+****************************************************************
+DELETE RECORD BY VALUE IN DATABASE
+****************************************************************
+>db.collection_name.deleteOne({JSON Format});
+
+Result: {
+		acknowledge:true,
+		deleteCount:1
+}
