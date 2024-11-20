@@ -7,6 +7,8 @@ import com.mongodb.client.MongoDatabase;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
 
+import java.util.List;
+
 public class MongoCRUD {
 	
 	
@@ -54,6 +56,24 @@ public class MongoCRUD {
 		if(deletedocument!=null) {
 			System.out.println("Document Deleted: "+deletedocument.toJson());
 		}
+		
+		
+	}
+	
+	public void insertMany(List<Document> documents) {
+		
+		if(documents ==null || documents.isEmpty()) {
+			System.out.println("No document provided for insertion");
+			return;
+		} 
+		collection.insertMany(documents);
+		System.out.println(documents.size()+ "Documents inserted successfully");
+	}
+	
+	public void deletemany(String name,String value) {
+	 long deleteCount=collection.deleteMany(eq(name,value)).getDeletedCount();
+	 
+	 System.out.println(deleteCount+ " documents deleted with "+ name + " = "+ value);;
 		
 		
 	}
