@@ -8,10 +8,10 @@
 </head>
 <body>
 
-<a href="test.jsp">Click Here</a>
-
-<br>
-
+<%
+String office=request.getParameter("office");
+out.print("Office Details: "+office);
+%>
 
 </body>
 </html>

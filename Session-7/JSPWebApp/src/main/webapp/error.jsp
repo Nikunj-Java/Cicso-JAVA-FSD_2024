@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isErrorPage="true" info="This is Error Page"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +8,9 @@
 </head>
 <body>
 
-<a href="test.jsp">Click Here</a>
+<h1>Error Handling</h1>
 
-<br>
-
+<%=exception.getMessage() %>
 
 </body>
 </html>
