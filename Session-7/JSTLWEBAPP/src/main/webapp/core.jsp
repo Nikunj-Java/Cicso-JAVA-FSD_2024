@@ -10,7 +10,7 @@
 </head>
 <body>
 
-
+<!-- download jstl1.2.jar file from: http://www.java2s.com/Code/Jar/j/Downloadjstl12jar.htm -->
 <c:set var="income" value="${4000*50 }" scope="session"></c:set>
 
 Income: <c:out value="${income }"></c:out><br>
