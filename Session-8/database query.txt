@@ -1,0 +1,17 @@
+-- Ensure the Airlines table exists
+CREATE TABLE IF NOT EXISTS Airlines (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    origin VARCHAR(100),
+    destination VARCHAR(100),
+    price DECIMAL(10, 2)
+);
+
+-- Insert sample airline data
+INSERT INTO Airlines (name, origin, destination, price) VALUES
+('Air India', 'Mumbai', 'Delhi', 4500.00),
+('IndiGo', 'Delhi', 'Bangalore', 3500.00),
+('SpiceJet', 'Chennai', 'Mumbai', 4000.00),
+('GoAir', 'Kolkata', 'Delhi', 3800.00),
+('Vistara', 'Bangalore', 'Kolkata', 5500.00),
+('AirAsia', 'Hyderabad', 'Pune', 3000.00);
