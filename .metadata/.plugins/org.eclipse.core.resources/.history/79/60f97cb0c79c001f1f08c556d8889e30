@@ -1,9 +1,0 @@
-package com.simplilearn.demo;
-
-public class Labmda {
-	public static void main(String[] args) {
-		var text="Hello";
-		System.out.println(text);
-	}
-
-}

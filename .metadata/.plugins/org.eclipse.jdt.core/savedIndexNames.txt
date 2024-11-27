@@ -1,5 +1,0 @@
-INDEX VERSION 1.134+D:\2024\JavaFSD2024\.metadata\.plugins\org.eclipse.jdt.core
-3918809023.index
-257836686.index
-1865797976.index
-2660464425.index
