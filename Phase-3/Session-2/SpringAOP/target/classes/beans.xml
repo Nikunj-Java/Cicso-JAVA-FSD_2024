@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="pRef" class="com.simplilearn.aspect.Product">
+
+		<property name="id" value="101"></property>
+		<property name="name" value="Water Bottles"></property>
+		<property name="price" value="2000"></property>
+		<property name="brand" value="Bisleri"></property>
+		<property name="stock" value="0"></property>
+	</bean>
+
+	<bean id="befAdv" class="com.simplilearn.aspect.BeforeAdvice"></bean>
+
+
+	<bean id="aftAdv" class="com.simplilearn.aspect.AfterAdvice"></bean>
+	
+	<bean id="productProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="interceptorNames">
+			<list>
+				<value>befAdv</value>
+				<value>aftAdv</value>
+			</list>
+		</property>
+	</bean>
+
+
+
+
+
+</beans>
