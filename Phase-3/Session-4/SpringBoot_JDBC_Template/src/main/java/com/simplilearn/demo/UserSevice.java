@@ -39,5 +39,22 @@ public class UserSevice {
 			return false;
 		}
 	}
+	
+	//update by id
+	
+		public User updateUser(User user,int id) {
+			if(repo.findById(id).isPresent()) {
+				User old= repo.findById(id).get();
+				old.setName(user.getName());
+				old.setEmail(user.getEmail());
+				old.setCountry(user.getCountry());
+				
+				return repo.save(old);
+			}else {
+				return null;
+			}
+		}
+	
+	
 
 }
