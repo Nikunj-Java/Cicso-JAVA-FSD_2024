@@ -19,5 +19,13 @@ public class UserSevice {
 	public List<User> getAllUsers(){
 		return repo.findAll();
 	}
+	
+	
+	public User getuserbyid(int id) {
+		if(repo.findById(id).isPresent())  
+			return repo.findById(id).get();
+		else
+			return null;
+	}
 
 }
