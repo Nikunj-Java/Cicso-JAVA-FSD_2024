@@ -27,5 +27,17 @@ public class UserSevice {
 		else
 			return null;
 	}
+	
+	
+	public boolean deleteUser(int id) {
+		
+		if(repo.findById(id).isPresent()) {
+			repo.deleteById(id);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 
 }
