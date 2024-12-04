@@ -1,0 +1,13 @@
+select project> right click> Run As> 
+1. maven cln
+2. maven install
+
+
+goto>project>Right click and refresh > target> FIND JAR FILE
+EG: your_project_name-0.0.1-SNAPSHOT.jar
+
+copy that jar file any where and open that folder using cmd:(move to your root dircetory of jar file)
+
+now run the below command: java -jar your_project_name-0.0.1-SNAPSHOT.jar
+
+now you can execute your all CRUD operation Commnds using Postmen
