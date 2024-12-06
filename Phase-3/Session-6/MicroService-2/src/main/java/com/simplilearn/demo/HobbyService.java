@@ -13,4 +13,8 @@ public class HobbyService {
 	public HobbyEntity addHobby(HobbyEntity hobby) {
 		return repo.save(hobby);
 	}
+	
+	public String findByPersonId(int personId) {
+		return repo.findByPersonId(personId);
+	}
 }
