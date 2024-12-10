@@ -1,5 +1,7 @@
 package com.simplilearn.demo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,11 @@ public class MongoService {
 	//method to add book
 	public MyBook addBook(MyBook book) {
 		return repo.save(book);
+	}
+	
+	//method to get details
+	public List<MyBook> getAllBooks(){
+		return repo.findAll();
 	}
 
 }
