@@ -29,5 +29,28 @@ public class MongoService {
 		else
 			return null;
 	}
+	
+	//delete by id
+	public boolean deleteBook(String id) {
+		if(repo.findById(id).isPresent()) {
+			repo.deleteById(id);
+			return true;}
+		else
+			return false;	
+	}
 
+	
+	//update user by Id
+	
+	public MyBook updateUser(MyBook book,String id) {
+		
+		if(repo.findById(id).isPresent()) {
+			MyBook old=repo.findById(id).get();
+			old.setTitle(book.getTitle());
+			old.setYear(book.getYear());
+			old.setAuthor(book.getAuthor());
+			return repo.save(old);
+		}else
+			return null;
+	}
 }
