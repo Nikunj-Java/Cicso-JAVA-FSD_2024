@@ -1,15 +1,20 @@
 package com.simplilearn.demo;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class MongoService {
 	
 	@Autowired
 	private MyBookRepository repo;
+	
+	RestTemplate restTemplate;
 	
 	
 	//method to add book
@@ -53,4 +58,5 @@ public class MongoService {
 		}else
 			return null;
 	}
+	 
 }

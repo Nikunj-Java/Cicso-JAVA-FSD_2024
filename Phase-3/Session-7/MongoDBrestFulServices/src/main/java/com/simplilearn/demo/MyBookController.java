@@ -31,14 +31,14 @@ public class MyBookController {
 		return service.getAllBooks();
 	}
 	
-	@GetMapping("/{id}")
+	/*@GetMapping("/{id}")
 	public  ResponseEntity<MyBook> getBookById(@PathVariable String id){
 		MyBook book= service.getBookById(id);
 		if(book!=null)
 			return new ResponseEntity<MyBook>(book,HttpStatus.FOUND);
 		else
 			return new ResponseEntity<MyBook>(book, HttpStatus.NOT_FOUND);
-	}
+	}*/
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Object> deleteUser(@PathVariable String id){
 		if(service.deleteBook(id))
@@ -58,4 +58,12 @@ public class MyBookController {
 			return new ResponseEntity<Object>("User Not Found",HttpStatus.NOT_FOUND);
 	}
 
+	@GetMapping("/{id}")
+	public  ResponseEntity<MyBook> getPrice(@PathVariable String bookId){
+		MyBook book= service.getBookById(bookId);
+		if(book!=null)
+			return new ResponseEntity<MyBook>(book,HttpStatus.FOUND);
+		else
+			return new ResponseEntity<MyBook>(book, HttpStatus.NOT_FOUND);
+	}
 }

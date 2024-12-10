@@ -13,4 +13,9 @@ public class BookDetailsService {
 	public BookDetailsEntity addBookDetails(BookDetailsEntity book) {
 		return repo.save(book);
 	}
+	
+	public String findByBookId(String bookId) {
+		return repo.findBookById(bookId);
+	}
+	 
 }
