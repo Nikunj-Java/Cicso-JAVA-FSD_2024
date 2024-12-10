@@ -21,5 +21,13 @@ public class MongoService {
 	public List<MyBook> getAllBooks(){
 		return repo.findAll();
 	}
+	
+	//get by id
+	public MyBook getBookById(String Id) {
+		if(repo.findById(Id).isPresent())
+			return repo.findById(Id).get();
+		else
+			return null;
+	}
 
 }
