@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>Car Booking APPlication</h1>
+	
+	<form action="/api/user/" method="post">
+		<label>Enter Your Name</label>
+		<input type="text" id="CarName" name="CarName" placeholder="Enter Your Name"/><br><br>
+		
+		<label>To:</label>
+		<input type="text" id="Destination" name="Destination" placeholder="Enter Your Destination Station"/><br><br>
+		
+		<label>From:</label>
+		<input type="text" id="Arrival" name="Arrival" placeholder="Enter Your Arrival Station"/><br><br>
+		
+		<label>Seats:</label>
+		<input type="text" id="Qnty" name="Qnty" placeholder="Enter Your Seats"/><br><br>
+		
+		<input type="submit" value="Book"/>
+	</form>
+	
+	<h2>Get The List of All Bookings</h2>
+	
+	<a href="/api/user/">Show Bookings</a>
+
+</body>
+</html>
