@@ -1,0 +1,40 @@
+*************************************************************************
+AWS UBUNTU INSTANCE
+*************************************************************************
+1. Prepare AWS Instance(Ubuntu Server 22.04 LTS (HVM),ssd Volume Type)
+2. Create New Key to Connect with Moba-xterm
+3. Download .pem key to your machine and keep it under one folder
+4. Add Network security: port no:8080 with CUstom TCp Rule
+5. create instance
+6. connect your local machine using AWS ClI or Mobax-term
+
+*************************************************************************
+Docker installtion
+*************************************************************************
+goto>google>search for how to install docker on ubuntu
+Link: https://docs.docker.com/engine/install/ubuntu/
+
+> sudo apt-get update
+> sudo apt-get install ca-certificates curl gnupg
+> sudo install -m 0755 -d /etc/apt/keyrings
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+> sudo chmod a+r /etc/apt/keyrings/docker.gpg
+> echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+> sudo apt-get update
+
+> sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+> docker -version
+
+**************************************************************************
+STEP:2 PULL DOCKER IMAGES FROM DOCKER 
+**************************************************************************
+EXERCISE:1
+
+STEP:1 PULL THE IMAGE
+------------------------
+
+> sudo docker pull docker/getting-started
+
+STEP:2 RUN THE CONTAINER WITH SPECIFIC PORT NUMBER
+----------------------------------------------------
+> sudo docker run -p 8080:8080 docker/getting-started
