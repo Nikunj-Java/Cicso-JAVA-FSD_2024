@@ -115,3 +115,49 @@ goto>aws>copy public ipv4 add
 
 now you can  create databses and tables as per your needs
 
+
+********************************************************************************************
+EXERCISE: DOCKER-SWARM
+********************************************************************************************
+- It is an orchastartion management tool that runs on docker Applications
+
+- it helps end-users in creating and deploying a cluster of docker nodes
+
+- Each node of a docker swarm is a docker daemon , and all daemons interacts using DOCKER API
+
+- Each container within the swarm can be deployed and accessed by the nodes of same  cluster
+
+- if one of the container fails we can use the swarm to correct that failure
+
+- it can reschedule containers on node failures
+
+- manages multiple containers running on node failures
+
+*********************************************************************************************
+set the permissions
+
+> sudo chmod  666 /var/run/docker.sock
+
+STEP:1 INITIATE DOCKER SWARM
+> sudo docker swarm init
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3707mabv5gak8savuonyiulousoeqpau23o3p8w2no3zs2pixx-6060spztg2mpxwwj68iy6toxb 172.31.81.231:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+
+STEP:2 CREATE SERVICE IN THIS DOCKER SWARM
+> sudo docker service create -p 80:80 --name myservice myimage 
+> check the output : curl localhost
+
+
+STEP:3 SCALE DOCKER CONTAINER ON DOCKER SWARM
+> sudo docker service scale myservice=3
+> sudo docker service ls
+> sudo docker service ps myservice 
+
+
+
+
