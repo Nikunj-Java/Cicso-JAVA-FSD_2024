@@ -75,3 +75,20 @@ goto: browser> copy your aws instance ipv4add:80 +Enter
 
 > you will see the out put in the browser
 
+
+******************************************************************************************
+EXERCISE: 3 PUSH THE IMAGES IN DOCKER HUB 
+******************************************************************************************
+
+> sudo docker tag myimage nikunj0510/cisco_image24
+> sudo docker login
+	> username:
+	> password:  
+	> else activate using browser and code
+	Message: Successfully Logged In
+goto> docker.com checj your repositories
+new repository with the name "cisco_images24" will be prepared
+
+
+
+
