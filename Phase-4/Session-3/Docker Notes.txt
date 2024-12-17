@@ -90,5 +90,28 @@ goto> docker.com checj your repositories
 new repository with the name "cisco_images24" will be prepared
 
 
+******************************************************************************************
+EXERCISE: 4 CREATING MYSQL DATABASE IN DOCKER CONTAINER
+******************************************************************************************
 
+> sudo docker pull mysql
+> sudo docker images
+> sudo docker  run --name my-app-db -e MY_ROOT_PASSWORD=password -d -p 3306:3306 mysql
+
+install mysql-cli
+> sudo apt update
+> sudo apt install mysql-client
+> mysql--version
+
+goto>aws>copy public ipv4 add
+
+> mysql -u root -h your_public_ipv4_add -P 3306 -p
+	eg: sudo mysql -u root -h 35.175.137.206 -P 3306 -p
+> password: password  (password will not be visible to you)
+
+	if all is ok you will see mysql tab in the cmd
+	that means we are ready to go and work with MYSQL on Docker Container
+> show databses;
+
+now you can  create databses and tables as per your needs
 
