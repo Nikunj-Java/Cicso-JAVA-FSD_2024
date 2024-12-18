@@ -1,7 +1,7 @@
 **********************************************************************
 AWS UBUNTU INSTANCE
 **********************************************************************
-1. Prepare AWS Instance (UbintuServer 22.04 LTS(HVM),ssd Voume Type)
+1. Prepare AWS Instance (UbuntuServer 22.04 LTS(HVM),ssd Voume Type)
 2. Create new Key Value pair to connect with LocalMachine using AWS CLI
 3. Download.pem key to your machine and keep it under any folder
 4. goto to that folder and open CMD and configure aws using access key and secreat key using i am user
