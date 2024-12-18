@@ -1,0 +1,39 @@
+*****************************************************************************
+MAVEN INTEGRATION
+*****************************************************************************
+1. Installation of Maven
+----------------------------
+Goto> Manage Jenkins> Manage Plugins> Available > Search for 'Maven Integration'
+Click On Install
+
+2.MAVEN And JAVA setup
+----------------------------
+goto>manage jenkins> tools
+
+JAVA:
+name: JAVA_HOME
+path: C:\Program Files\Java\jdk-17.0.2
+
+MAVEN:
+name: maven
+version: 3.9.4
+(this you can get from your eclips project> windows> preference>maven>installation> check your maven version and select same here)
+
+
+SAVE IT
+
+3.MAVEN PROJECT
+------------------------------
+goto> Dashboard>create job> maven project> add Description>build>
+copy the path of your  project's POM.XML file and add here
+
+eg:D:\WorkSpace-Server-New\SpringBoot_JDBC_Template\pom.xml
+
+4. GOALS AND OPTION
+> clean test
+
+click save 
+
+click build now
+
+this will build your project here in jenkins
