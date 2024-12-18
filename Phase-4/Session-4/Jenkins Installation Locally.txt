@@ -1,0 +1,19 @@
+Step:1 Download Jenkins.war file
+------------------------------------
+Link: https://updates.jenkins.io/download/war/
+
+Step:2 Copy the file to ProgramFiles
+----------------------------------------------
+> open CMD from the samefolder where jenkins.war file is available
+> java -jar jenkins.war
+
+
+this will start jenkins and gives you secreat initial admin password:
+> copy that password
+> open browser: loaclhost:8080
+> paste the initial admin password 
+> click on install suggested plugins
+> give the credential for sign up
+> you are ready with jenkins now
+
+
