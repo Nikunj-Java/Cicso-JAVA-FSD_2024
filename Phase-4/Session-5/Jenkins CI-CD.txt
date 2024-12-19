@@ -1,0 +1,131 @@
+**********************************************************************
+AWS UBUNTU INSTANCE
+**********************************************************************
+1. Prepare AWS Instance (UbuntuServer 22.04 LTS(HVM),ssd Voume Type)
+2. Create new Key Value pair to connect with LocalMachine using AWS CLI
+3. Download.pem key to your machine and keep it under any folder
+4. goto to that folder and open CMD and configure aws using access key and secreat key using i am user
+5. copy the ssh key from AWS>instance>connect>SSH Connect> Example Key
+
+***********************************************************************
+DOCKER INSTALLATION
+***********************************************************************
+goto>google>Search for how to install docker on Ubuntu
+Link: https://docs.docker.com/engine/install/ubuntu/
+
+# Add Docker's official GPG key:
+> sudo apt-get update
+> sudo apt-get install ca-certificates curl
+> sudo install -m 0755 -d /etc/apt/keyrings
+> sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+> sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+> echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+> sudo apt-get update
+> sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+DOCKER COMMANDS
+------------------------
+
+- To check version: 
+	> docker --version
+- Running Container: 
+	> sudo docker ps -a
+- docker images: 
+	> sudo docker images
+- docker container: 
+	> sudo docker container ls
+- create container in detach mode: 
+	> sudo docker run -d -p 80:80 docker/getting-started
+- stop container: 
+	> sudo docker stop name_of_container
+- remove container: 
+	> sudo docker rm -f name_of_container
+- remove image: 
+	> sudo docker rmi -f name_of image
+
+*************************************************************************
+STEP:2 JDK INSTALLATION
+*************************************************************************
+
+> sudo apt-get update
+> sudo apt install openjdk-17-jdk   or 11 instead
+
+*************************************************************************
+STEP:3 MAVEN INSTALLATION
+*************************************************************************
+
+> sudo apt-get update
+> sudo apt-get install maven
+> mvn -version
+
+*************************************************************************
+STEP:4 JENKINS INSTALLATION
+*************************************************************************
+LINK: https://www.jenkins.io/doc/book/installing/linux/
+
+ > sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+> echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+> sudo apt-get update
+> sudo apt-get install jenkins
+
+OR IF YOU WANT TO CHANGE PORT NO
+
+> sudo apt-get install jenkins --httpPort=8081
+
+
+
+START JENKINS
+----------------------
+> sudo service jenkins start
+
+STOP JENKINS
+----------------------
+> sudo service jenkins stop
+
+PERMISSIONS
+----------------------
+> sudo chmod 777 /var/run/docker.sock
+
+
+goto> AWS INstance> Copy Public ipv4 add> open browser with > ip_add:8080
+
+PASSWWORD
+-------------------------
+> sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+create pipline project
+
+add below  script
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build Stage'
+            }
+        }
+        stage('Run') {
+            steps {
+                echo 'Application Running'
+            }
+        }
+        stage('Docker') {
+            steps {
+                echo 'Started Docker Container'
+            }
+        }
+         
+    }
+}
+
+
+
+
+
