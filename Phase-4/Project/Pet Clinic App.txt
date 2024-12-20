@@ -1,0 +1,25 @@
+1. Creating Springboot Application
+
+Reference:https://github.com/Nikunj-Java/Cicso-JAVA-FSD_2024/tree/main/Phase-3/TravelAppProject
+
+
+2. Create JENKINS & DOCKER FILE
+
+reference:https://github.com/Nikunj-Java/SpringBootCICD.git
+
+
+3.  CREATE AWS INSTANCE AND INSTALL DOCKER, JAVA, MAVEN, JENKINS
+
+reference: https://github.com/Nikunj-Java/Cicso-JAVA-FSD_2024/blob/main/Phase-4/Session-5/Jenkins%20CI-CD.txt
+
+
+4. CREATE JENKINS CICD pipeline
+
+reference: https://github.com/Nikunj-Java/Cicso-JAVA-FSD_2024/blob/main/Phase-4/Session-5/CICD%20Pipeline%20setup.pdf
+
+5. open the app > copy ipadd from ec2 instance  and posrt number
+
+goto browser> ipadd:port
+
+
+
