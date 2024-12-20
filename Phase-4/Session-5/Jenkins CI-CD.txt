@@ -91,6 +91,7 @@ PERMISSIONS
 > sudo chmod 777 /var/run/docker.sock
 
 
+
 goto> AWS INstance> Copy Public ipv4 add> open browser with > ip_add:8080
 
 PASSWWORD
